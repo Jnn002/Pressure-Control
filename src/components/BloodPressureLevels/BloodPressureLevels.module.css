@@ -1,0 +1,131 @@
+.title {
+    font-size: 1.2rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.columnHeaders {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 0.4rem 0.6rem 0.4rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.columnHeaders span {
+    flex-basis: 33.33%;
+}
+
+.columnHeaders span:nth-child(1) {
+    text-align: left;
+}
+
+.row {
+    display: flex;
+    padding: 0.5rem;
+    color: var(--dark-text-gray-lighter);
+    justify-content: space-between;
+    text-align: center;
+}
+
+.row span {
+    flex-basis: 33.33%;
+}
+
+.row span:nth-child(1) {
+    text-align: left;
+}
+
+.rowTop {
+    border-top-left-radius: var(--radius-lg);
+    border-top-right-radius: var(--radius-lg);
+}
+
+.rowBottom {
+    border-bottom-left-radius: var(--radius-lg);
+    border-bottom-right-radius: var(--radius-lg);
+    margin-bottom: 0.75rem;
+}
+
+.source {
+    margin-top: 0.2rem;
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+
+.source a {
+    color: var(--color-primary);
+}
+
+.source a:hover,
+.source a:visited,
+.source a:active,
+.source a:link,
+.source a:focus,
+.source a:target {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.disclaimer {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-color-secondary);
+}
+
+.levelNormal {
+    background-color: var(--normal-color);
+}
+
+.levelElevated {
+    background-color: var(--elevada-color);
+}
+
+.levelStage1 {
+    background-color: var(--hipertension1-color);
+}
+
+.levelStage2 {
+    background-color: var(--hipertension2-color);
+}
+
+.levelStage3 {
+    background-color: var(--hipertension3-color);
+}
+
+.levelAisolated {
+    background-color: var(--hipertension3-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    .levelLow {
+        background-color: var(--hipotension-light);
+    }
+
+    .levelNormal {
+        background-color: var(--normal-light);
+    }
+
+    .levelElevated {
+        background-color: var(--elevada-light);
+    }
+
+    .levelStage1 {
+        background-color: var(--hipertension1-light);
+    }
+
+    .levelStage2 {
+        background-color: var(--hipertension2-light);
+    }
+
+    .levelStage3 {
+        background-color: var(--hipertension3-light);
+    }
+
+    .levelAisolated {
+        background-color: var(--hipertension3-light);
+    }
+}

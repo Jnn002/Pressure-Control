@@ -1,0 +1,72 @@
+.exportPDFReportContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dateRangeContainer {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .2rem;
+  width: 100%;
+}
+
+.dateRangeContainer input {
+  border: 1px solid var(--background-color);
+  background-color: var(--background-color-secondary);
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  border-radius: 0.313rem;
+  padding: .3rem;
+}
+
+.title {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.buttonContainer {
+  margin-top: 1rem;
+  display: flex;
+}
+
+.buttonContainer * {
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 0.313rem;
+  padding: 0.5rem 1rem;
+}
+
+.buttonContainer button {
+  border: none;
+  margin: 0;
+}
+
+.buttonContainer div {
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+.noLogsInDateRangeMessage {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  margin-top: 1rem;
+  font-size: 1rem;
+  cursor: initial;
+  font-weight: bold;
+}

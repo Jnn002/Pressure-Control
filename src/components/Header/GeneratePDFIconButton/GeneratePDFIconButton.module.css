@@ -1,0 +1,19 @@
+.generatePDFIconButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.pdfIcon {
+    width: 100%;
+    height: 100%;
+}
+
+.generatePDFIconButton:hover {
+    transform: scale(1.01);
+    transition: transform 0.1s ease-in-out;
+}

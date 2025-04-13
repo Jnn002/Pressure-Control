@@ -1,0 +1,104 @@
+.statsContainer {
+    padding: 1rem;
+    width: 100%;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.averagesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "systolic diastolic"
+        "pulse pulse";
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.statCard {
+    background-color: var(--background-color-secondary);
+    border-radius: 0.625rem;
+    padding: 1.25rem;
+    text-align: center;
+    border: var(--border-normal);
+}
+
+.statCard:nth-child(1) {
+    grid-area: systolic;
+}
+
+.statCard:nth-child(2) {
+    grid-area: diastolic;
+}
+
+.pulseCard {
+    grid-area: pulse;
+}
+
+.statCard h3 {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    font-weight: normal;
+}
+
+.value {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.number {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.unit {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.chartContainer {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--background-color-secondary);
+    border-radius: 0.625rem;
+    border: var(--border-normal);
+}
+
+.noDataContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 1rem;
+}
+
+.chartsGrid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.chartCard {
+    background-color: var(--background-color-secondary);
+    border-radius: 0.625rem;
+    padding: 1.25rem;
+    border: var(--border-normal);
+}
+
+@media (min-width: 768px) {
+    .chartsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

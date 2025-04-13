@@ -1,0 +1,125 @@
+.donateContainer {
+    display: flex;
+    width: 100%;
+    border: var(--border-normal);
+    flex-direction: column;
+    padding: 0.3rem 0.4rem 0 0.4rem;
+    margin: 0.5rem auto;
+    text-align: center;
+    justify-content: space-around;
+    border-radius: 0.313rem;
+}
+
+.donateContainer h3 {
+    font-weight: bold;
+    font-size: 0.92rem;
+    margin: 0 0 0.4rem 0;
+}
+
+.donateContainer span {
+    display: inline-block;
+    text-align: center;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.donateContainer a:hover {
+    cursor: pointer;
+    background-color: var(--color-primary);
+    border-radius: 0.313rem;
+}
+
+.walletContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 0.5rem;
+    margin: 0.8rem 0;
+}
+
+.walletColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(50% - 0.25rem);
+}
+
+.platformLogo {
+    margin-bottom: 0.5rem;
+    border-radius: 0.313rem;
+    padding: 0.2rem;
+}
+
+.platformLogo:hover {
+    cursor: pointer;
+}
+
+.bankAcc {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding-bottom: 0.1rem;
+    background-color: transparent;
+    color: var(--text-color);
+    border: none;
+}
+
+.bankAcc img:hover {
+    cursor: pointer;
+    background-color: var(--interactive-gray);
+    border-radius: 0.313rem;
+}
+
+.bankAcc div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.bankAcc img {
+    width: 1rem;
+    height: auto;
+    padding: 0;
+    margin: 0 0.5rem 0 0.2rem;
+}
+
+.bankAcc p {
+    font-size: 0.7rem;
+    margin: 0;
+    padding: 0;
+}
+
+.bankAcc div:last-child {
+    display: flex;
+    justify-content: center;
+}
+
+.bankAcc span {
+    font-size: 0.5rem;
+    margin: 0;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90%;
+}
+
+.donateBanners {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    padding: 0;
+    margin: 1rem;
+}
+
+.donateBanners img:hover {
+    cursor: pointer;
+}
+
+.copyIcon {
+    max-width: 0.625rem;
+    max-height: 0.75rem;
+}

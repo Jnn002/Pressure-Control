@@ -1,0 +1,13 @@
+.title {
+  font-size: 1.2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bloodPressureMeasurementGuideContainer h4 {
+  margin-bottom: 0;
+}
+
+.bloodPressureMeasurementGuideContainer li {
+  margin-top: .5rem;
+}

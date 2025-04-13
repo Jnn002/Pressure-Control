@@ -1,0 +1,25 @@
+.logsListContainer {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  max-width: 23.438rem;
+  margin: 1rem auto;
+}
+
+.yearHeader {
+  font-size: 1.2rem;
+  margin: .2rem 0 .1rem 0;
+  text-align: center
+}
+
+.dayHeader {
+  font-size: .8rem;
+  margin: .2rem 0 .1rem 0;
+  text-align: center;
+}
+
+.dateYearContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

@@ -1,0 +1,32 @@
+7Space::
+7  ; Esperar hasta que se suelte la tecla Espacio
+ 7 KeyWait, Space, T0.2
+7
+7  ; Bloquear el teclado y el ratón
+7  BlockInput, On
+
+7  ; Establecer el retraso entre pulsaciones de teclas simuladas
+7  SetKeyDelay, 200
+
+ 77 Send, {Tab}
+  7Send, {Tab}
+  7Send, {Tab}
+  7Send, {Tab}
+  7Send, {Enter}
+
+  7Send, {Tab}
+  7Send, {Tab}
+  7Send, {Tab}
+  7Send, {Raw}1
+
+  7Send, {Tab}
+  7Send, {Raw}1
+
+  7Send, {Tab}
+  7Send, {Raw}1
+
+  7Send, {Enter}
+
+  ; Desbloquear el teclado y el ratón
+ 7 BlockInput, Off
+7return

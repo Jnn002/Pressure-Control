@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+    color-scheme: light dark;
+
+    --overlay-color: rgba(0, 0, 0, 0.5);
+    /* Pression colors */
+    /* Light Theme*/
+    --hipotension-light: #2c7da0;
+    --normal-light: #3e8e2f;
+    --elevada-light: #f5b947;
+    --hipertension1-light: #e37a26;
+    --hipertension2-light: #d66a1f;
+    --hipertension3-light: #c42e28;
+
+    --hipotension-dark: #73bac7;
+    --normal-dark: #5acc38;
+    --elevada-dark: #f7d342;
+    --hipertension1-dark: #f1aa4c;
+    --hipertension2-dark: #e88e3a;
+    --hipertension3-dark: #fd2f1c;
+
+    /** Light Theme */
+    /* Background Colors */
+    --light-background-pri: #f9f9fb;
+    --light-background-sec: #fcfcfd;
+
+    /* Interactive Components */
+    --light-interact-green: #bee9dd;
+    --light-interact-white: #eff0f3;
+
+    /* inactive */
+    --light-inactive-gray: #e0e1e6;
+    --light-inactive-green: #d1f1e8;
+
+    /* Borders */
+    --light-border-gray: #d8d9e0;
+    --light-border-gray-active: #cdced7;
+    --light-border-green: #aadccf;
+    --light-border-green-active: #90cbbc;
+
+    /* Separators */
+    --light-separator: #00083046;
+    --light-separator-green: #69b6a5;
+
+    /* colors */
+    --light-acc-gray: #8b8d98;
+    --light-acc-green: #2c7365;
+    --light-acc-green-lighter: #3b8172;
+
+    /* Font Colors */
+    --light-text-green-darker: #22413a;
+    --light-text-green: #2e7566;
+    --light-text-gray-inactive: #e0e1e6;
+    --light-text-gray-darker: #1e1f24;
+    --light-text-gray: #62636c;
+
+    /** Dark Theme */
+    /* Background Colors */
+    --dark-background-pri: #101012;
+    --dark-background-sec: #17171b;
+
+    /* Interactive Components #17171b*/
+    --dark-interact-gray: #222225;
+    --dark-interact-green: #112b26;
+
+    /* inactive */
+    --dark-inactive-gray: #303136;
+    --dark-inactive-green: #0b3931;
+
+    /* Borders */
+    --dark-border-gray: #393a40;
+    --dark-border-gray-active: #46484f;
+    --dark-border-green: #21554a;
+    --dark-border-green-active: #2d675b;
+
+    /* Separators */
+    --dark-separator-gray: #5f606a;
+    --dark-separator-green: #377d6e;
+
+    /* colors */
+    --dark-gray-solid: #6c6e79;
+    --dark-green-solid: #2c7365;
+
+    /* Font Colors */
+    --dark-text-green-lighter: #cefef1f4;
+    --dark-text-green: #a5ffeaca;
+    --dark-text-gray-inactive: #303136;
+    --dark-text-gray-lighter: #eeeef0;
+    --dark-text-gray: #b2b3bd;
+
+    /** --------------   INIT ---------------*/
+    /* General light config */
+    /* font colors */
+    --text-color: var(--light-text-gray-darker);
+    --text-color-secondary: var(--light-text-gray);
+    --text-color-terciary: var(--light-text-gray-inactive);
+    --text-color-green: var(--light-text-green);
+    --text-color-secondary-green: var(--light-text-green-darker);
+
+    /* Background Colors */
+    --background-color: var(--light-background-pri);
+    --background-color-secondary: var(--light-background-sec);
+
+    --color-primary: var(--light-acc-green);
+    --color-white: #ffffff;
+
+    /* Presison level colors */
+    --hipotension-color: var(--hipotension-light);
+    --normal-color: var(--normal-light);
+    --elevada-color: var(--elevada-light);
+    --hipertension1-color: var(--hipertension1-light);
+    --hipertension2-color: var(--hipertension2-light);
+    --hipertension3-color: var(--hipertension3-light);
+
+    /* borders light colors */
+
+    --light-border: 1px solid var(--light-border-gray);
+    --light-border-active: 1px solid var(--light-border-gray-active);
+    --light-border-green: 1px solid var(--light-border-green);
+    --light-border-green-active: 1px solid var(--light-border-green-active);
+
+    /* Borders */
+    --border-normal: 1px solid var(--light-border-gray);
+    --border-active: 1px solid var(--light-border-gray-active);
+    --border-normal-green: 1px solid var(--light-border-green);
+    --border-active-green: 1px solid var(--light-border-green-active);
+
+    --border-outline: 1px solid transparent;
+    /* interactive color component */
+    --interactive-gray: var(--light-interact-white);
+    --interactive-green: var(--light-interact-green);
+
+    /* border radius values */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.625rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        /* Font Colors */
+        --text-color: var(--dark-text-gray-lighter);
+        --text-color-secundary: var(--dark-text-gray);
+        --text-color-terciary: var(--dark-text-gray-inactive);
+        --text-color-green: var(--dark-text-green);
+        --text-color-secondary-green: var(--dark-text-green-lighter);
+
+        /* Background Colors */
+        --background-color: var(--dark-background-pri);
+        --background-color-secondary: var(--dark-background-sec);
+
+        /* Update blood pressure colors for dark theme */
+        --hipotension-color: var(--hipotension-dark);
+        --normal-color: var(--normal-dark);
+        --elevada-color: var(--elevada-dark);
+        --hipertension1-color: var(--hipertension1-dark);
+        --hipertension2-color: var(--hipertension2-dark);
+        --hipertension3-color: var(--hipertension3-dark);
+
+        /* borders */
+        --border-normal: 1px solid var(--dark-border-gray);
+        --border-active: 1px solid var(--dark-border-gray-active);
+        --border-normal-green: 1px solid var(--dark-border-green);
+        --border-active-green: 1px solid var(--dark-border-green-active);
+
+        --border-outline: 1px solid transparent;
+
+        /* interactive color component */
+        --interactive-gray: var(--dark-interact-gray);
+        --interactive-green: var(--dark-interact-green);
+    }
+}
+
+/*Override explícito via data-theme*/
+:root[data-theme="dark"] {
+    /* fONTS */
+    --text-color: var(--dark-text-gray-lighter);
+    --text-color-secondary: var(--dark-text-gray);
+    --text-color-terciary: var(--dark-text-gray-inactive);
+    --text-color-green: var(--dark-text-green);
+    --text-color-secondary-green: var(--dark-text-green-lighter);
+
+    /* Background Colors */
+    --background-color: var(--dark-background-pri);
+    --background-color-secondary: var(--dark-background-sec);
+
+    /* Update blood pressure colors for dark theme */
+    --hipotension-color: var(--hipotension-dark);
+    --normal-color: var(--normal-dark);
+    --elevada-color: var(--elevada-dark);
+    --hipertension1-color: var(--hipertension1-dark);
+    --hipertension2-color: var(--hipertension2-dark);
+    --hipertension3-color: var(--hipertension3-dark);
+
+    /* borders */
+    --border-normal: 1px solid var(--dark-border-gray);
+    --border-active: 1px solid var(--dark-border-gray-active);
+    --border-normal-green: 1px solid var(--dark-border-green);
+    --border-active-green: 1px solid var(--dark-border-green-active);
+    --border-outline: 1px solid transparent;
+
+    /* interactive color component */
+    --interactive-gray: var(--dark-interact-gray);
+    --interactive-green: var(--dark-interact-green);
+}
+
+body {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+}
+
+#root {
+    width: 100%;
+    padding: 3rem 0.5rem 0 0.5rem;
+    margin: 0 auto;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+::selection {
+    background-color: var(--interactive-green);
+}
+
+.stats-view {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.stats-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.stat-box {
+    background: var(--background-secondary);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.stat-box h3 {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.stat-box p {
+    margin: 0.5rem 0 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.histogram-container {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: var(--background-secondary);
+    border-radius: 8px;
+}

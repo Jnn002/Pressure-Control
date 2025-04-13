@@ -1,0 +1,30 @@
+.titleContainer {
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+}
+
+.logo {
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 50%;
+  background-color: var(--light-bg);
+}
+
+.appTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.appTitle h1 {
+  margin: 0;
+  line-height: 1;
+  font-size: 1.25rem;
+}
+
+.appTitle span {
+  font-size: .7rem;
+}

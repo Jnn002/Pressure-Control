@@ -1,0 +1,13 @@
+.addButton {
+    background-color: var(--color-primary);
+    border-radius: 35%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 4rem;
+    height: 4rem;
+    background-image: url("/src/assets/svg/add.svg");
+}

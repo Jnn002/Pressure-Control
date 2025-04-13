@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 23.438rem;
+    background-color: var(--background-color-secondary);
+    border: var(--border-normal);
+    color: var(--light-text);
+    border-end-end-radius: 0.625rem;
+    border-end-start-radius: 0.625rem;
+    height: 3rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    z-index: 100;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.iconsContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+}
+
+.iconsRightContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-right: 0.6rem;
+}

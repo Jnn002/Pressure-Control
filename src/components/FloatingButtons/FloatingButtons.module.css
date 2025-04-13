@@ -1,0 +1,36 @@
+.bottomContainer {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 23.438rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    pointer-events: none;
+    align-items: flex-end;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.buttonContainer {
+    pointer-events: auto;
+}
+
+.statsButton {
+    background-color: var(--color-primary);
+    border-radius: 35%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    color: white;
+    padding: 1rem;
+}
+
+.statsButton:hover {
+    opacity: 0.9;
+}

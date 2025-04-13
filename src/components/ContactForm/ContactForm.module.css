@@ -1,0 +1,71 @@
+.contactFormContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 1.2rem;
+    margin: 0 auto;
+}
+
+.contactFormContainer form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 80%;
+    margin: 0.5rem auto;
+}
+
+.contactFormContainer form input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: var(--background-color-secondary);
+    color: var(--text-color);
+    font-family: inherit;
+    border: var(--border-normal);
+    border-radius: var(--radius-sm);
+    box-shadow: none;
+}
+
+.contactFormContainer form textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: var(--background-color-secondary);
+    color: var(--text-color);
+    font-family: inherit;
+    border: var(--border-normal);
+    border-radius: var(--radius-sm);
+    box-shadow: none;
+    resize: none;
+}
+
+.contactFormContainer form input::placeholder,
+.contactFormContainer form textarea::placeholder {
+    color: var(--text-color-secondary);
+    font-style: italic;
+}
+
+.contactFormContainer form input:focus,
+.contactFormContainer form textarea:focus {
+    outline: none;
+    border: var(--border-active);
+}
+
+.contactFormContainer form button {
+    width: 100%;
+    border-radius: 0.313rem;
+    background-color: var(--color-primary);
+    cursor: pointer;
+    padding: 0.5rem;
+    border: none;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--color-white);
+}
+
+.contactFormContainer form button:hover {
+    background-color: var(--light-acc-green-lighter);
+}

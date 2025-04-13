@@ -1,0 +1,71 @@
+.socialMediaContainer {
+    max-width: 23.438rem;
+}
+
+.title {
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+}
+
+.socialMediaContent {
+    display: flex;
+    justify-content: center;
+}
+
+.socialMediaContentWrapper {
+    display: flex;
+    padding: 0.2rem;
+    gap: 5%;
+    width: 100%;
+    justify-content: center;
+}
+
+.pictureContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.pictureContainer img {
+    border-radius: 50%;
+    padding: 0.025rem;
+}
+
+.pictureContainer img:hover {
+    background-color: var(--interactive-gray);
+}
+
+.linksContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    white-space: nowrap;
+    justify-content: center;
+    gap: 0.2rem;
+    padding: 0 0.25rem;
+}
+
+.linksContainer a,
+.linksContainer a:link,
+.linksContainer a:focus,
+.linksContainer a:active {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    border-radius: 0.313rem;
+    gap: 0.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.linksContainer a:hover {
+    background-color: var(--interactive-gray);
+}
+
+.linksContainer img {
+    margin: 0.125rem;
+    width: 1rem;
+}

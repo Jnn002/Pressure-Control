@@ -1,0 +1,382 @@
+.addEditLogContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem 1.25rem 0 1.25rem;
+    overflow: hidden;
+    border: var(--border-normal);
+    border-radius: var(--radius-lg);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.button {
+    background-color: transparent;
+    color: var(--light-text);
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+    text-decoration: none;
+    border: none;
+}
+
+.coloredButton {
+    color: var(--text-color-green);
+    font-weight: bold;
+}
+
+.addButton {
+    color: var(--text-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.content {
+    overflow-y: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    touch-action: pan-y pinch-zoom;
+}
+
+.content h2 {
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.row {
+    background-color: var(--background-color-secondary);
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    border: var(--border-normal);
+    position: relative;
+}
+
+.row.column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.row > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.inputContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputContainer label {
+    margin-bottom: 0.313rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.bpmText {
+    font-size: 0.8rem;
+    color: var(--text-color-secondary);
+    margin-top: 0.25rem;
+}
+
+.inputContainer input {
+    padding: 0.313rem;
+    background-color: var(--background-color-secondary);
+    color: var(--text-color);
+    font-size: 2rem;
+    width: 100%;
+    font-family: inherit;
+    text-align: center;
+    border: var(--border-normal);
+    border-radius: var(--radius-sm);
+}
+
+.inputContainer textarea::placeholder,
+.inputContainer input::placeholder {
+    color: var(--text-color-secondary);
+    font-style: italic;
+}
+
+.dateContainer input:focus,
+.inputContainer textarea:focus,
+.inputContainer input:focus {
+    border: var(--border-active);
+    border-radius: var(--radius-sm);
+    outline: none;
+}
+
+.inputContainer textarea:focus {
+    border: none;
+}
+
+.inputContainer textarea {
+    padding: 0.313rem;
+    color: var(--text-color);
+    background-color: var(--background-color-secondary);
+    font-size: 1rem;
+    width: 100%;
+    min-width: 285px;
+    font-family: inherit;
+    resize: none;
+    background-image: none;
+    background-origin: content-box;
+    background-size: 1.1rem 1.1rem;
+    background-repeat: no-repeat;
+    background-position: top right;
+    border-radius: var(--radius-sm);
+    border: none;
+    outline: none;
+}
+
+.inputContainer textarea.hasContent {
+    background-image: url("../../assets/pencil.png");
+}
+
+.inputContainer textarea.emptyDark {
+    background-image: url("../../assets/pencil_white.png");
+}
+
+.inputContainer textarea.emptyLight {
+    background-image: url("../../assets/pencil_black.png");
+}
+
+.outOfRangeMessageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.313rem;
+}
+
+.outOfRangeMessageContainer span {
+    font-size: 0.8rem;
+}
+
+.outOfRangeMessageContainer a {
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    text-decoration: underline;
+}
+
+.fullWidth {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.dateContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+}
+
+.dateContainer input {
+    border: 1px solid var(--background-color);
+    background-color: var(--background-color-secondary);
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: inherit;
+    border: var(--border-normal);
+    border-radius: var(--radius-sm);
+    outline: none;
+}
+
+.dateContainer input:focus::selection {
+    background-color: var(--interactive-green);
+}
+
+.iconContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.iconContainer input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--light-inactive-gray);
+    cursor: pointer;
+    width: 2rem;
+    height: 1.05rem;
+    border: var(--border-normal);
+    border-radius: 1rem;
+    position: relative;
+}
+
+.iconContainer input[type="checkbox"]:checked {
+    border-color: var(--light-acc-green);
+    background-color: var(--light-acc-green-lighter);
+}
+
+.iconContainer input[type="checkbox"]:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: var(--light-background-sec);
+    border: 1px solid var(--light-border-gray);
+    border-radius: 1rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.iconContainer input[type="checkbox"]:checked:before {
+    transform: translateX(1rem);
+    background-color: var(--light-inactive-gray);
+    border-color: var(--light-acc-green);
+    border-width: 0.01rem;
+}
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+}
+
+.iconLabel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 0.625rem;
+}
+
+.backToTop {
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.inputContainer select {
+    background-color: var(--background-color-secondary);
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: inherit;
+    border-radius: var(--radius-sm);
+    border: var(--border-normal);
+    outline: none;
+}
+
+.pulseInputGroup {
+    display: flex;
+    align-items: stretch;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.pulseInputGroup input {
+    flex: 1;
+    padding: 0.313rem;
+    background-color: var(--background-color-secondary);
+    color: var(--text-color);
+    font-size: 2rem;
+    font-family: inherit;
+    text-align: center;
+    border: var(--border-normal);
+    border-radius: var(--radius-sm);
+}
+
+.pulseContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.pulseContainer input {
+    padding: 0.313rem;
+    background-color: var(--background-color-secondary);
+    color: var(--text-color);
+    font-size: 2rem;
+    width: 100%;
+    font-family: inherit;
+    text-align: center;
+    border: var(--border-normal);
+    border-radius: var(--radius-sm);
+}
+
+.cameraButton {
+    font-size: 0.8rem;
+    color: var(--text-color-secondary);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.cameraButton:hover {
+    color: var(--text-color);
+    text-decoration: underline;
+    transform: scale(1.05);
+    transition: transform 0.1s;
+}
+
+.measureHeartRateButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    min-width: 40px;
+    height: 40px;
+}
+
+.measureHeartRateButton:hover {
+    background-color: var(--color-primary-dark);
+    transform: scale(1.05);
+}
+
+.measureHeartRateButton:active {
+    transform: scale(0.95);
+}
+
+.measureHeartRateButton img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}

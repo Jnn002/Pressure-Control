@@ -1,0 +1,130 @@
+.container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.measurementArea {
+    position: relative;
+    width: 280px;
+    height: 240px;
+    margin: 20px auto;
+    background-color: var(--background-color-secondary);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    border: var(--border-normal);
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.canvas {
+    display: none;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.startButton,
+.stopButton {
+    padding: 12px 24px;
+    border-radius: var(--radius-sm);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.startButton {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.stopButton {
+    background-color: var(--color-error);
+    color: white;
+}
+
+.result {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: var(--background-color-secondary);
+    border-radius: var(--radius-sm);
+    border: var(--border-normal);
+}
+
+.result h3 {
+    margin: 0 0 10px 0;
+    color: var(--text-color);
+}
+
+.result p {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.error {
+    color: var(--color-error);
+    text-align: center;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: var(--background-color-error);
+    border-radius: var(--radius-sm);
+}
+
+.instructions {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: var(--background-color-secondary);
+    border-radius: var(--radius-sm);
+    border: var(--border-normal);
+}
+
+.instructions h3 {
+    margin: 0 0 15px 0;
+    color: var(--text-color);
+}
+
+.instructions ol {
+    margin: 0;
+    padding-left: 20px;
+    color: var(--text-color);
+}
+
+.instructions li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.progressOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.progressBar {
+    height: 4px;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.progressText {
+    color: white;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}

@@ -1,0 +1,118 @@
+.logContainer {
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.3rem 0.8rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background-color: var(--background-color-secondary);
+    border: var(--border-normal);
+    border-radius: var(--radius-md);
+}
+
+.logContainer:hover {
+    cursor: pointer;
+    transform: scale(1.005);
+    transition: transform 0.2s ease-in-out;
+    background-color: var(--interactive-gray);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.level {
+    font-size: 1.2rem;
+    font-weight: 900;
+    padding: 0.01rem 0.2rem;
+}
+
+.date {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.mmhg {
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.bpmContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 2%;
+    width: 10rem;
+}
+
+.bpm {
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.leyend {
+    color: var(--text-color);
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+.leyendSmaller {
+    font-size: 0.55rem;
+}
+
+.pulseContainer {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.leyendContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.levelNormal {
+    color: var(--normal-color);
+}
+
+.levelElevated {
+    color: var(--elevada-color);
+}
+
+.levelStage1 {
+    color: var(--hipertension1-color);
+}
+
+.levelStage2 {
+    color: var(--hipertension2-color);
+}
+
+.levelStage3,
+.levelAisolated {
+    color: var(--hipertension3-color);
+}
+
+.levelError {
+    color: var(--text-color);
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.icon {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.iconsContainer {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-end;
+    padding-bottom: 0.3rem;
+    justify-content: center;
+}

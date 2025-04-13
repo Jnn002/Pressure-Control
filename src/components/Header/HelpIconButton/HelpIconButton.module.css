@@ -1,0 +1,9 @@
+.helpIconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+}
