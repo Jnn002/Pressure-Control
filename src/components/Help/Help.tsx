@@ -44,7 +44,7 @@ const Help = ({ onClose }: { onClose: () => void }) => {
                                 onClick={() => navigate("/help/arrythmia")}
                             >
                                 <QuestionIcon width="1.25rem" height="1.25rem" />
-                                <span>¿Qué es "Arritmia (latido irregular)"?</span>
+                                <span>¿Qué es Arritmia?</span>
                             </button>
 
                             <span className={styles.rowTitle}></span>
