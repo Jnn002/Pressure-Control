@@ -1,56 +1,56 @@
 [
-  {
-    "id": "001_162",
-    "date": "2025-01-18T20:09",
-    "systolic": 162,
-    "diastolic": 89,
-    "pulse": 68,
-    "medicine": true,
-    "notes": "Rivotril,Muy rica!"
-  },
-  {
-    "id": "001_182",
-    "date": "2025-01-18T09:12",
-    "systolic": 182,
-    "diastolic": 119,
-    "pulse": 68,
-    "medicine": false,
-    "notes": ""
-  },
-  {
-    "id": "001_163",
-    "date": "2025-01-17T22:02",
-    "systolic": 163,
-    "diastolic": 109,
-    "pulse": 68,
-    "medicine": true,
-    "notes": "Valium, especial!"
-  },
-  {
-    "id": "001_140",
-    "date": "2025-01-17T10:42",
-    "systolic": 140,
-    "diastolic": 94,
-    "pulse": 63,
-    "medicine": true,
-    "notes": ""
-  },
-  {
-    "id": "001_132",
-    "date": "2025-01-16T21:42",
-    "systolic": 132,
-    "diastolic": 86,
-    "pulse": 67,
-    "medicine": false,
-    "notes": "Pastilla de carbón 💩"
-  },
-  {
-    "id": "001_120",
-    "date": "2025-01-16T07:42",
-    "systolic": 120,
-    "diastolic": 80,
-    "pulse": 65,
-    "medicine": true,
-    "notes": ""
-  }
+    {
+        "id": "001_162",
+        "date": "2025-01-18T20:09",
+        "systolic": 162,
+        "diastolic": 89,
+        "pulse": 68,
+        "medicine": true,
+        "notes": "Sensación extraña!"
+    },
+    {
+        "id": "001_182",
+        "date": "2025-01-18T09:12",
+        "systolic": 182,
+        "diastolic": 119,
+        "pulse": 68,
+        "medicine": false,
+        "notes": ""
+    },
+    {
+        "id": "001_163",
+        "date": "2025-01-17T22:02",
+        "systolic": 163,
+        "diastolic": 109,
+        "pulse": 68,
+        "medicine": true,
+        "notes": "Sensación extraña!"
+    },
+    {
+        "id": "001_140",
+        "date": "2025-01-17T10:42",
+        "systolic": 140,
+        "diastolic": 94,
+        "pulse": 63,
+        "medicine": true,
+        "notes": ""
+    },
+    {
+        "id": "001_132",
+        "date": "2025-01-16T21:42",
+        "systolic": 132,
+        "diastolic": 86,
+        "pulse": 67,
+        "medicine": false,
+        "notes": "Pastilla de carbón"
+    },
+    {
+        "id": "001_120",
+        "date": "2025-01-16T07:42",
+        "systolic": 120,
+        "diastolic": 80,
+        "pulse": 65,
+        "medicine": true,
+        "notes": ""
+    }
 ]
