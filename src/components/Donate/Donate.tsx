@@ -8,7 +8,7 @@ import banco_industrial from "@/assets/banco_industrial.png";
 import banco_industrial_black from "@/assets/banco_industrial.png";
 
 import styles from "./Donate.module.css";
-//TODO: CHECK THIS, CHANGE FOR PREVIUS IMPLEMENTATION, kofi and usdt
+
 const DONATE_TITLES = ["Donar ahora", "Apoyar el proyecto", "Contribuir"];
 
 const DONATE_EMOJIS = ["💖", "❤️"];

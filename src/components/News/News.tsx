@@ -236,4 +236,3 @@ const News = () => {
 };
 
 export default News;
-//TODO: drop

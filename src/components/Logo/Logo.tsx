@@ -16,4 +16,3 @@ const Logo = React.memo(() => {
 });
 
 export default Logo;
-//TODO: <span>v.{import.meta.env.VITE_APP_VERSION}</span>

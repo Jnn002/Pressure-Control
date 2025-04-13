@@ -112,4 +112,3 @@ const Settings = ({ onClose }: { onClose: () => void }) => {
 };
 
 export default Settings;
-//TODO: move help to settings

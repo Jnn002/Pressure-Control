@@ -20,5 +20,4 @@ const Header = () => {
     );
 };
 
-//TODO: HelpIcon on big screens <HelpIconButton />
 export default Header;

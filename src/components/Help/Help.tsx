@@ -83,5 +83,4 @@ const Help = ({ onClose }: { onClose: () => void }) => {
         </>
     );
 };
-//TODO: check News component
 export default Help;

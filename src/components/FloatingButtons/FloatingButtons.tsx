@@ -1,7 +1,6 @@
 import AddButton from "@/components/AddButton/AddButton";
 import styles from "./FloatingButtons.module.css";
 
-//TODO: CHECK SHARE
 interface FloatingButtonsProps {
     onClick: () => void;
 }
