@@ -14,13 +14,13 @@ const LogsList = () => {
         <section className={styles.logsListContainer}>
             {logs.map((log, index) => {
                 if (index === 0) {
-                    lastDateWithoutTime = new Date(log.date.substring(0, 10)); // 2025-01-19
-                    lastYear = new Date(log.date).getFullYear(); // 2025
+                    lastDateWithoutTime = new Date(log.date.substring(0, 10));
+                    lastYear = new Date(log.date).getFullYear();
                 }
 
-                const dateToShow = formatToDayMonth(new Date(log.date)); // 2 de enero
-                const yearToShow = new Date(log.date).getFullYear(); // 2025
-                const timeToShow = formatToTimeOnly(new Date(log.date)); // 15:26
+                const dateToShow = formatToDayMonth(new Date(log.date));
+                const yearToShow = new Date(log.date).getFullYear();
+                const timeToShow = formatToTimeOnly(new Date(log.date));
 
                 const currentDateWithoutTime = new Date(log.date.substring(0, 10));
                 let shouldShowDateHeader = isAfter(lastDateWithoutTime, currentDateWithoutTime);

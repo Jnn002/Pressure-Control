@@ -9,10 +9,15 @@ const BloodPressureLevels = () => {
                 <span>Sistólica</span>
                 <span>Diastólica</span>
             </div>
-            <div className={`${styles.row} ${styles.rowTop} ${styles.levelNormal}`}>
+            <div className={`${styles.row} ${styles.rowTop} ${styles.levelLow}`}>
+                <span>Hipotensión</span>
+                <span>&lt; 90</span>
+                <span>&lt; 60</span>
+            </div>
+            <div className={`${styles.row} ${styles.levelNormal}`}>
                 <span>Normal</span>
-                <span>&lt; 130</span>
-                <span>&lt; 85</span>
+                <span>90 - 130</span>
+                <span>60 - 85</span>
             </div>
             <div className={`${styles.row} ${styles.levelElevated}`}>
                 <span>Elevada</span>
@@ -20,17 +25,17 @@ const BloodPressureLevels = () => {
                 <span>85 - 89</span>
             </div>
             <div className={`${styles.row} ${styles.levelStage1}`}>
-                <span>Nivel 1</span>
+                <span>Hipertensión Grado 1</span>
                 <span>140 - 159</span>
                 <span>90 - 99</span>
             </div>
             <div className={`${styles.row} ${styles.levelStage2}`}>
-                <span>Nivel 2</span>
+                <span>Hipertensión Grado 2</span>
                 <span>160 - 179</span>
                 <span>100 - 109</span>
             </div>
             <div className={`${styles.row} ${styles.levelStage3}`}>
-                <span>Nivel 3</span>
+                <span>Hipertensión Grado 3</span>
                 <span>&ge; 180</span>
                 <span>&ge; 110</span>
             </div>
@@ -42,38 +47,37 @@ const BloodPressureLevels = () => {
             <div className={`${styles.source}`}>
                 <span>Fuente 1:&nbsp;</span>
                 <a
-                    href="https://www.argentina.gob.ar/sites/default/files/salud-guia-practica-clinica-nacional-hta-2024.pdf"
+                    href="https://www.who.int/es/news-room/fact-sheets/detail/hypertension"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    2024 - Guía Práctica Clínica Nacional de Hipertensi&oacute;n Arterial, Ministerio de Salud de la
-                    Nación Argentina.
+                    2023 - Hipertensi&oacute;n, Organización Mundial de la Salud.
                 </a>
             </div>
             <div className={`${styles.source}`}>
                 <span>Fuente 2:&nbsp;</span>
                 <a
-                    href="https://www.argentina.gob.ar/sites/default/files/bancos/2021-04/interpretacion-uso-nuevas-tablas-referencia-de-presion-arterial-prosane-2020.pdf"
+                    href="https://www.paho.org/es/hearts-americas/hearts-americas-medicion-presion-arterial"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    2020 - Programa Nacional de Salud Escolar (PROSANE), Ministerio de Salud de la Nación Argentina.
+                    2022 - Medición de la presión arterial, Organización Panamericana de la Salud.
                 </a>
             </div>
             <div className={`${styles.source}`}>
                 <span>Fuente 3:&nbsp;</span>
                 <a
-                    href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/75000-79999/76388/norma.htm"
+                    href="https://tusalud.com.gt/aprende/hipertension-todo-lo-que-se-necesita-saber-de-ella"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    2002 - Ministerio de Salud de la Nación Argentina.
+                    2024 - Hipertensión arterial, Tusalud.
                 </a>
             </div>
             <div className={`${styles.disclaimer}`}>
                 <span>
-                    La clasificación puede variar dependiendo de la edad, género, país, etc. Siempre consulte a un
-                    profesional de la salud para saber más.
+                    La clasificación puede variar dependiendo de la edad, género, país, etc. Consulte a un profesional
+                    de la salud para obtener un diagnóstico preciso.
                 </span>
             </div>
         </div>

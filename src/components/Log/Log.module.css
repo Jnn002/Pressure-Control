@@ -76,6 +76,10 @@
     justify-content: center;
 }
 
+.levelLow {
+    color: var(--hipotension-color);
+}
+
 .levelNormal {
     color: var(--normal-color);
 }

@@ -73,7 +73,7 @@ const Stats = () => {
 
     // Datos para el gráfico de barras de distribución por categoría
     const categoryData = {
-        labels: ["Normal", "Normal Elevada", "Nivel 1", "Nivel 2", "Fuera de Rango"],
+        labels: ["Normal", "Elevada", "Hipertensión 1", "Hipertensión 2", "Fuera de Rango"],
         datasets: [
             {
                 label: "Cantidad de mediciones",

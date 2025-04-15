@@ -101,3 +101,9 @@
     cursor: not-allowed;
     pointer-events: none;
 }
+
+.row.disabled:hover {
+    background-color: var(--background-color-secondary);
+    border: var(--border-normal);
+    cursor: not-allowed;
+}

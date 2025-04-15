@@ -11,6 +11,7 @@ import ClockIcon from "@/assets/svg/clock_gray.svg?react";
 import styles from "./Log.module.css";
 
 const styleByCategory = {
+    [categoryType.HIPOTENSION]: styles["levelLow"],
     [categoryType.NORMAL]: styles["levelNormal"],
     [categoryType.NORMAL_ELEVATED]: styles["levelElevated"],
     [categoryType.STAGE_1]: styles["levelStage1"],

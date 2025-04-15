@@ -219,32 +219,24 @@
     --interactive-gray: var(--dark-interact-gray);
     --interactive-green: var(--dark-interact-green);
 
-    /* Mejoras para las gráficas en modo oscuro */
     [class*="chartCard"] {
-        /* Aumentar el contraste del fondo para las gráficas */
         background-color: #1e1e24 !important;
         border: 1px solid #333 !important;
         padding: 1.5rem !important;
     }
-
-    /* Variables específicas para las gráficas en modo oscuro */
     --chart-grid-color: rgba(200, 200, 200, 0.1);
     --chart-text-color: rgba(255, 255, 255, 0.8);
     --chart-background: #1e1e24;
 
-    /* Selectores para los elementos de las gráficas en modo oscuro */
     canvas {
-        /* Estilos para mejorar la visibilidad de las gráficas en modo oscuro */
         filter: brightness(1.1);
     }
 
-    /* Sobrescribir estilos de Chart.js mediante CSS */
     .chartjs-render-monitor {
         background-color: var(--chart-background) !important;
     }
 
-    /* Hack para aplicar estilos a los elementos internos de Chart.js */
-    --override-chart-styles: initial; /* Truco para activar los estilos CSS */
+    --override-chart-styles: initial;
 }
 
 body {

@@ -1,7 +1,7 @@
 {
-    "name": "mipresion",
-    "description": "MiPresión - Registro de presión sanguínea",
-    "version": "1.5.0",
+    "name": "presion-umg",
+    "description": "Registro de presión sanguínea",
+    "version": "1.6.0",
     "private": true,
     "type": "module",
     "scripts": {

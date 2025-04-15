@@ -1,10 +1,9 @@
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useLogContext } from "@/hooks/useLogContext";
 import { useThemeContext } from "@/hooks/useTheme";
-import Logo from "@/components/Logo/Logo";
 import { Theme } from "@/contexts/ThemeEnum";
+import Logo from "@/components/Logo/Logo";
 import Seo from "../SEO/SEO";
-
 import PdfIcon from "@/assets/svg/pdf_gray.svg?react";
 import MoonIcon from "@/assets/svg/moon_gray.svg?react";
 import SunIcon from "@/assets/svg/sun_gray.svg?react";

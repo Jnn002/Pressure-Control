@@ -1,17 +1,16 @@
 import React, { useCallback, useEffect, useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { Theme } from "@/contexts/ThemeEnum";
 import { useLogContext } from "@/hooks/useLogContext";
 import { useThemeContext } from "@/hooks/useTheme";
-import BloodPressureLevels from "@/components/BloodPressureLevels/BloodPressureLevels";
 import { formatToISODateString } from "@/utils/formatDateUtils";
 import { categoryType, getCategory } from "@/utils/getCategory";
+import BloodPressureLevels from "@/components/BloodPressureLevels/BloodPressureLevels";
 import getPNGIconPath from "@/utils/getPNGIconPath";
-import { Theme } from "@/contexts/ThemeEnum";
 import Seo from "../SEO/SEO";
-import { useNavigate, useLocation } from "react-router-dom";
-
-import WarningIcon from "@/assets/svg/warning.svg?react";
 
 import styles from "./AddEditLog.module.css";
+import WarningIcon from "@/assets/svg/warning.svg?react";
 
 export interface LogData {
     id: string;
@@ -34,13 +33,11 @@ const AddEditLog = ({ onClose }: AddEditLogProps) => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    // Get the measured pulse and previous form data from location state
     const measuredPulse = location.state?.measuredPulse;
     const fromMeasurement = location.state?.fromMeasurement;
     const previousFormData = location.state?.previousFormData;
 
     const [data, setData] = useState<LogData>(() => {
-        // If we have previous form data, use it as initial state
         if (previousFormData) {
             return {
                 ...previousFormData,
@@ -48,7 +45,6 @@ const AddEditLog = ({ onClose }: AddEditLogProps) => {
             };
         }
 
-        // Otherwise use default initial state
         return {
             id: "",
             systolic: "",
@@ -71,14 +67,12 @@ const AddEditLog = ({ onClose }: AddEditLogProps) => {
     const diastolicRef = React.useRef(null);
     const pulseRef = React.useRef(null);
 
-    // Effect to handle measured pulse updates
     useEffect(() => {
         if (measuredPulse && fromMeasurement) {
             setData(prevData => ({
                 ...prevData,
                 pulse: measuredPulse
             }));
-            // Clear the location state but keep the modal open
             navigate(".", {
                 replace: true,
                 state: {}
@@ -166,7 +160,6 @@ const AddEditLog = ({ onClose }: AddEditLogProps) => {
     };
 
     const handleMeasureHeartRate = () => {
-        // Store current form data before navigating
         navigate("/measure-heart-rate", {
             state: {
                 previousFormData: data // Pass the current form data

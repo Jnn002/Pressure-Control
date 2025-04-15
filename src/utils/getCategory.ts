@@ -1,9 +1,10 @@
 export const categoryType = {
+    HIPOTENSION: "Hipotensión",
     NORMAL: "Normal",
-    NORMAL_ELEVATED: "Normal Elevada",
-    STAGE_1: "Nivel 1",
-    STAGE_2: "Nivel 2",
-    STAGE_3: "Nivel 3",
+    NORMAL_ELEVATED: "Elevada",
+    STAGE_1: "Hipertensión 1",
+    STAGE_2: "Hipertensión 2",
+    STAGE_3: "Hipertensión 3",
     SYSTOLIC_AISOLATED: "Sistólica Aislada",
     OUT_OF_RANGE: "Valores fuera de rango"
 };
@@ -34,6 +35,13 @@ const categories: Category[] = [
                 result = true;
             }
             return result;
+        }
+    },
+    {
+        key: "HIPOTENSION",
+        value: categoryType.HIPOTENSION,
+        condition: (systolic, diastolic) => {
+            return systolic < 90 && diastolic < 60;
         }
     },
     {

@@ -24,14 +24,9 @@ const DataStorage = () => {
 
             <p>
                 ¡Dato importante! Los datos están seguros en tu dispositivo - no se guardan en ningún servidor ni se
-                comparten con nadie.
+                comparten con nadie. Pero si deseas usar diferentes dispositivos, te recomendamos crear una cuenta{" "}
+                <br></br>Tus datos se almacenarán en una base de datos segura y no se compartirán con nadie.
             </p>
-
-            <p>
-                Si deseas usar diferentes dispositivos, te recomendamos crear una cuenta <br></br>Tus datos se
-                almacenarán en una base de datos segura y no se compartirán con nadie.
-            </p>
-
             <p className={styles.dataStorageDisclaimer}>
                 <strong>Puedes borrar tus datos cuando lo desees y no guardaremos nada de ellos</strong>
             </p>

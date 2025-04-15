@@ -18,8 +18,8 @@ const ContactForm = () => {
 
         try {
             await emailjs.send(
-                "service_a3a16rs",
-                "template_6x8vumk",
+                "service",
+                "template",
                 {
                     from_name: from_name + " (Usuario de MiPresión)",
                     to_name: "Grupo 1",

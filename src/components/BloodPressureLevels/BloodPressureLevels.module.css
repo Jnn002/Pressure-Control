@@ -76,6 +76,10 @@
     color: var(--text-color-secondary);
 }
 
+.levelLow {
+    background-color: var(--hipotension-light);
+}
+
 .levelNormal {
     background-color: var(--normal-color);
 }
