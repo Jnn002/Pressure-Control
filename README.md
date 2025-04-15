@@ -39,8 +39,8 @@
 ### Desktop
 
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-    <img src="src/assets/screenshots/cap0_desk.png" width="260" alt="Vista de la aplicación">
-    <img src="src/assets/screenshots/cap1_desk.png" width="260" alt="Vista de la aplicación"
-    <img src="src/assets/screenshots/cap2_desk.png" width="260" alt="Vista de la aplicación">
-    <img src="src/assets/screenshots/cap3_desk.png" width="260" alt="Vista de la aplicación">
+    <img src="src/assets/screenshots/cap0_desk.png" width="350" alt="Vista de la aplicación">
+    <img src="src/assets/screenshots/cap1_desk.png" width="350" alt="Vista de la aplicación">
+    <img src="src/assets/screenshots/cap2_desk.png" width="350" alt="Vista de la aplicación">
+    <img src="src/assets/screenshots/cap3_desk.png" width="350" alt="Vista de la aplicación">
 </div>
