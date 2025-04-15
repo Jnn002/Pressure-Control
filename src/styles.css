@@ -319,8 +319,11 @@ body {
     border-radius: 8px;
 }
 
-/* --- Responsive Styles for 1200px and up --- */
 @media (min-width: 1200px) {
+    :root {
+        font-size: 18px;
+    }
+
     #root {
         padding: 3rem 2rem 0 2rem;
         max-width: 1600px;
