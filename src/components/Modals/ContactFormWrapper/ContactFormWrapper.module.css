@@ -8,6 +8,7 @@
     width: 100%;
     border: var(--border-normal);
     border-radius: var(--radius-lg);
+    min-height: 400px;
 }
 
 .header {
@@ -54,7 +55,8 @@
     touch-action: pan-y;
     position: relative;
     height: 100%;
-    margin-top: 0.8rem;
+    align-items: center;
+    margin-top: 3rem;
 }
 
 .content::-webkit-scrollbar {

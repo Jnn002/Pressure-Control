@@ -1,4 +1,5 @@
 import { useLogContext } from "@/hooks/useLogContext";
+import { useThemeContext } from "@/hooks/useTheme";
 import { useMemo } from "react";
 import { Bar, Line } from "react-chartjs-2";
 import { categoryType, getCategory } from "@/utils/getCategory";
@@ -19,6 +20,12 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, LineElement, PointEleme
 
 const Stats = () => {
     const { logs } = useLogContext();
+    const { theme } = useThemeContext();
+
+    const isDarkMode = theme === "dark";
+
+    const gridColor = isDarkMode ? "rgba(255, 255, 255, 0.1)" : "rgba(0, 0, 0, 0.1)";
+    const textColor = isDarkMode ? "rgba(255, 255, 255, 0.8)" : "var(--text-color)";
 
     const stats = useMemo(() => {
         if (logs.length === 0) {
@@ -77,18 +84,11 @@ const Stats = () => {
                     stats.distribution[categoryType.STAGE_2],
                     stats.distribution[categoryType.OUT_OF_RANGE]
                 ],
-                backgroundColor: [
-                    "#4CAF50", // Normal
-                    "#FFC107", // Normal Elevada
-                    "#FF9800", // Nivel 1
-                    "#F44336", // Nivel 2
-                    "#9E9E9E" // Fuera de Rango
-                ]
+                backgroundColor: ["#4CAF50", "#FFC107", "#FF9800", "#F44336", "#9E9E9E"]
             }
         ]
     };
 
-    // Datos para el gráfico de línea de tendencias
     const trendData = useMemo(() => {
         const lastTenLogs = [...logs]
             .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
@@ -125,7 +125,7 @@ const Stats = () => {
             title: {
                 display: true,
                 text: "Distribución por Categoría",
-                color: "var(--text-color)",
+                color: textColor,
                 font: {
                     size: 16
                 }
@@ -136,18 +136,18 @@ const Stats = () => {
                 beginAtZero: true,
                 ticks: {
                     stepSize: 1,
-                    color: "var(--text-color)"
+                    color: textColor
                 },
                 grid: {
-                    color: "var(--border-color)"
+                    color: gridColor
                 }
             },
             x: {
                 ticks: {
-                    color: "var(--text-color)"
+                    color: textColor
                 },
                 grid: {
-                    color: "var(--border-color)"
+                    color: gridColor
                 }
             }
         }
@@ -159,13 +159,13 @@ const Stats = () => {
             legend: {
                 position: "top" as const,
                 labels: {
-                    color: "var(--text-color)"
+                    color: textColor
                 }
             },
             title: {
                 display: true,
                 text: "Tendencia últimas 10 mediciones",
-                color: "var(--text-color)",
+                color: textColor,
                 font: {
                     size: 16
                 }
@@ -176,20 +176,20 @@ const Stats = () => {
                 min: 40,
                 max: 200,
                 ticks: {
-                    color: "var(--text-color)"
+                    color: textColor
                 },
                 grid: {
-                    color: "var(--border-color)"
+                    color: gridColor
                 }
             },
             x: {
                 ticks: {
-                    color: "var(--text-color)",
+                    color: textColor,
                     maxRotation: 45,
                     minRotation: 45
                 },
                 grid: {
-                    color: "var(--border-color)"
+                    color: gridColor
                 }
             }
         }

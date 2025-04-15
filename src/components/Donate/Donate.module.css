@@ -8,6 +8,7 @@
     text-align: center;
     justify-content: space-around;
     border-radius: 0.313rem;
+    min-height: 250px;
 }
 
 .donateContainer h3 {

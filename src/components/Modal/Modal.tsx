@@ -32,7 +32,12 @@ const Modal = ({ isOpen, fullscreen, onClose, children }: ModalProps) => {
     };
 
     return (
-        <div className={styles.modal} onClick={onClose} onTouchMove={handleTouchMove}>
+        <div
+            id={`Modal_${Math.random().toString(36).substr(2, 9)}`}
+            className={styles.modal}
+            onClick={onClose}
+            onTouchMove={handleTouchMove}
+        >
             <div
                 className={`${styles.content} ${fullscreen ? styles.fullscreen : ""}`}
                 onClick={handleContentClick}

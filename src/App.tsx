@@ -1,5 +1,5 @@
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useLogContext } from "@/hooks/useLogContext";
 import AddEditLog from "@/components/AddEditLog/AddEditLog";
 import FloatingButtons from "@/components/FloatingButtons/FloatingButtons";
@@ -21,10 +21,12 @@ import ArrythmiaWrapper from "@/components/Modals/ArrythmiaWrapper/ArrythmiaWrap
 import DonateSocialMediaWrapper from "@/components/Modals/DonateSocialMediaWrapper/DonateSocialMediaWrapper";
 import HeartRateMeasurementWrapper from "@/components/Modals/HeartRateMeasurementWrapper/HeartRateMeasurementWrapper";
 import StatsWrapper from "@/components/Modals/StatsWrapper/StatsWrapper";
+import Stats from "@/components/Stats/Stats";
 
 const App = () => {
     const { selectedLogId, setSelectedLogId, logs } = useLogContext();
     const navigate = useNavigate();
+    const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1200);
 
     function LocationTracker() {
         const location = useLocation();
@@ -40,6 +42,16 @@ const App = () => {
         }
     }, [selectedLogId, navigate]);
 
+    // Manejar cambios de tamaño de ventana
+    useEffect(() => {
+        const handleResize = () => {
+            setIsDesktop(window.innerWidth >= 1200);
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     const handleCloseModal = (to = "/") => {
         if (typeof to !== "string") {
             to = "/";
@@ -53,6 +65,13 @@ const App = () => {
             <Seo />
 
             <Header />
+
+            {/* Renderizado condicional de Stats para desktop */}
+            {isDesktop && logs.length > 0 && (
+                <div className="stats-container-desktop">
+                    <Stats />
+                </div>
+            )}
 
             {logs.length > 0 ? (
                 <>
@@ -133,7 +152,7 @@ const App = () => {
                 <Route
                     path="/settings"
                     element={
-                        <Modal onClose={() => handleCloseModal()} isOpen={true}>
+                        <Modal onClose={() => handleCloseModal()} isOpen={true} className="settings-modal">
                             <Settings onClose={() => handleCloseModal()} />
                         </Modal>
                     }
@@ -175,14 +194,17 @@ const App = () => {
                     }
                 />
 
-                <Route
-                    path="/stats"
-                    element={
-                        <Modal onClose={() => handleCloseModal()} isOpen={true}>
-                            <StatsWrapper onClose={() => handleCloseModal()} />
-                        </Modal>
-                    }
-                />
+                {/* Ruta de Stats solo visible en mobile */}
+                {!isDesktop && (
+                    <Route
+                        path="/stats"
+                        element={
+                            <Modal onClose={() => handleCloseModal()} isOpen={true}>
+                                <StatsWrapper onClose={() => handleCloseModal()} />
+                            </Modal>
+                        }
+                    />
+                )}
             </Routes>
         </main>
     );

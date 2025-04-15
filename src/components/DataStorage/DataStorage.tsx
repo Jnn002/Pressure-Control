@@ -27,9 +27,14 @@ const DataStorage = () => {
                 comparten con nadie.
             </p>
 
-            <p>Si volvés a ingresar desde el mismo navegador y dispositivo, ahí seguirán mientras no los elimines.</p>
+            <p>
+                Si deseas usar diferentes dispositivos, te recomendamos crear una cuenta <br></br>Tus datos se
+                almacenarán en una base de datos segura y no se compartirán con nadie.
+            </p>
 
-            <p>Cuidalos como propios, porque lo son. 😊</p>
+            <p className={styles.dataStorageDisclaimer}>
+                <strong>Puedes borrar tus datos cuando lo desees y no guardaremos nada de ellos</strong>
+            </p>
         </div>
     );
 };

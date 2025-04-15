@@ -14,7 +14,7 @@ const StatsIconButton = () => {
             onClick={() => navigate("/stats")}
             aria-label="Ver estadísticas"
             role="button"
-            className={styles.statsIconButton}
+            className={`${styles.statsIconButton} stats-button-mobile`}
         >
             <img src={theme === Theme.Dark ? ChartIconWhite : ChartIcon} className={styles.statsIcon} />
         </button>
