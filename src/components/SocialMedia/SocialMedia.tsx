@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import umg from "@/assets/umg.png";
+import umg from "@/assets/favicon_120x121.png";
 import gmail from "@/assets/gmail.png";
 import github from "@/assets/github.png";
 import linkedin from "@/assets/linkedin.png";
